@@ -1,11 +1,10 @@
 /* This components handles exports in the main App: */
 
 // Layout:
-/* export { default as Navbar } from './layout/navbar/Navbar.jsx'; */
 
 export { default as Grid } from './layout/Grid.jsx';
 
-
+export { default as Game } from './layout/Grid.jsx';
 
 
 /* -------------------------------------------------------------------------- */
