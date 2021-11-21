@@ -1,0 +1,64 @@
+$--main-bg-color: #F0E9DC; /* Alabaster */
+$--sec-bg-color: #07678E; /* Blue Sapphire */
+$--main-btn-color: #2DBCB4; /* Tiffany Blue */
+$--neutral-color: #12130F; /* Smoky Black */
+$--misc-color: #BF4E30; /* Vermillion */
+$--txt-color: #2c426a;
+
+/* .Button p {
+    font-size: .8rem;
+    padding: 1rem 0;
+    text-align: center;
+} */
+
+.Button {
+    border: 1px solid $--main-btn-color;
+    outline: none;
+    background: #fff;
+    color:$--main-btn-color;
+    cursor: pointer;
+    /* background: transparent; */
+    display: inline-block;
+    border-radius: .2em;
+    font-family: 'Otomanopee One', sans-serif;
+    letter-spacing: .08em;
+    font-size: 18px;
+    padding: 12px 20px;
+    line-height: 120%;
+    height: 48px;
+    min-width: 48px;
+    --webkit-transition: all 250ms ease 50ms;
+    /* transform: translate(40%, 0%); */
+    margin-top: 2rem;
+    /* margin-left: 3.5rem; */
+    text-decoration: none;
+}
+
+.Button:hover {
+    background: $--main-btn-color;
+    transition: background 0.5s;
+    box-shadow: 0 0 10px #494f653b;
+    border: 1px solid $--sec-bg-color;
+    color: #fff;
+    /* transition: all 250ms ease 50ms; */
+    /* -webkit-transition: all 250ms ease 50ms; */
+}
+
+.Wide {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+a.Button {
+    display: inline-block;
+  
+    &:hover {
+      text-decoration: initial;
+    }
+  }
+
+/* .DisabledButton {
+  cursor: not-allowed;
+    border-style: dashed;
+    opacity: 0.4;
+} */

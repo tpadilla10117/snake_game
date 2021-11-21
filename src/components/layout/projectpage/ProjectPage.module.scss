@@ -1,0 +1,57 @@
+$--width-text: 640px;
+$--width-main: 1180px;
+$--gray-light: #f7f8f8;
+$--gray-primary: #C4C4C4;
+$--main-bg-color: #F0E9DC; /* Alabaster */
+$--sec-bg-color: #07678E; /* Blue Sapphire */
+$--main-btn-color: #2DBCB4; /* Tiffany Blue */
+$--neutral-color: #12130F; /* Smoky Black */
+$--misc-color: #BF4E30; /* Vermillion */
+$--txt-color: #2c426a;
+
+.ProjectPage {
+    max-width: $--width-text;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  
+    h1 {
+      color: $--sec-bg-color;
+      font-family: 'Otomanopee One', sans-serif;
+      text-align: center;
+    }
+  
+    p {
+      margin: 2rem 0;
+      font-family: 'Amatic SC', sans-serif;
+      color: $--txt-color;
+      font-size: 20px;
+    }
+  
+    h2 {
+      margin-top: .25rem;
+      font-family: 'Amatic SC', sans-serif;
+      text-align: center;
+      color:$--main-btn-color;
+    }
+  
+    h3 {
+      font-size: 1.563rem;
+      text-align: center;
+      margin: 2rem 0 1rem 0;
+      color: $--sec-bg-color;
+      font-family: 'Otomanopee One', sans-serif;
+    }
+  
+    ul {
+      margin-bottom: 1rem;
+      font-family: 'Amatic SC', sans-serif;
+      font-size: 20px;
+      color: $--txt-color;
+    }
+  }
+  
+  .Img {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid $--txt-color;
+  }

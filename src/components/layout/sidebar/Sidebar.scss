@@ -1,0 +1,91 @@
+.sidebar-container {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background: #07678E;
+    display: grid;
+    align-items: center;
+    top: 0;
+    left: 0;
+}
+
+.sidebar-icon {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+    background: transparent;
+    font-size: 2rem;
+    cursor: pointer;
+    /* outline: nine; */
+}
+
+.close-icon {
+    color: #fff;
+}
+
+.sidebar-wrapper {
+    color: #fff;
+}
+
+.sidebar-menu {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 80px);
+    text-align: center;
+    font-family: 'Otomanopee One', sans-serif;
+}
+
+.sidebar-link {
+    font-size: 1.5rem;
+    text-decoration: none;
+    list-style: none;
+    transition: 0.2 ease-in-out;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+
+    &:hover {
+        color: #01bf71;
+        transition: 0.2 ease-in-out;
+    }
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    letter-spacing: 3px;
+    font-size: 1.5em;
+    font-family: 'Otomanopee One', sans-serif;
+    /* font-weight: 500; */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 15px);
+    text-align: center;
+
+    &:hover{
+        color: red;
+        transition: color 600ms ease 0s;
+    }
+}
+
+/* THIS IS WHERE THE ANIMATION FOR SIDEBAR IS APPLIED */
+
+.sideBarTransition-enter {
+    opacity: 0;
+    transform: scale(1);
+  }
+  .sideBarTransition-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms, transform 300ms;
+  }
+  .sideBarTransition-exit {
+    opacity: 1;
+  }
+  .sideBarTransition-exit-active {
+    opacity: 0;
+    transform: scale(1);
+    transition: opacity 300ms, transform 300ms;
+  }
