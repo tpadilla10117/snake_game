@@ -3,6 +3,8 @@
 // Layout:
 /* export { default as Navbar } from './layout/navbar/Navbar.jsx'; */
 
+export { default as Grid } from './layout/Grid.jsx';
+
 
 
 
