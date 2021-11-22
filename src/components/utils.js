@@ -4,8 +4,6 @@
 
 export { default as Grid } from './layout/Grid.jsx';
 
-export { default as Game } from './layout/Grid.jsx';
-
 
 /* -------------------------------------------------------------------------- */
 

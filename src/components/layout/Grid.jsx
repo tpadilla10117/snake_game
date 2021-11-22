@@ -5,6 +5,7 @@ import { SNAKE_SPEED, draw as drawSnake, update as updateSnake } from './Snake';
 function Grid() {
 
     let lastRenderTime = 0;
+    const gameBoard = document.getElementById('game-board');
 
 /* How many times the snake moves per second:  */
     /* const SNAKE_SPEED = 2; */
@@ -35,7 +36,7 @@ function Grid() {
     }
 
     function draw() {
-        drawSnake();
+        drawSnake(gameBoard);
     }
 
     return (
