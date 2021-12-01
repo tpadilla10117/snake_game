@@ -1,5 +1,6 @@
 
 //TODO: Implement with React framework
+//TODO: Game WORKS, but it's re-rendering due to the react framework.  Place this into Vanilla Js then re-write with react
 /* import React from "react"; */
 
 
@@ -18,12 +19,12 @@ function Grid() {
     function main(currentTime) {
 
     //TODO: Check the confirm error:
-        /* if(gameOver) {
-            if(confirm('You lose.  Press ok to restart.')) {
+        if(gameOver) {
+            if(window.confirm('You lose.  Press ok to restart.')) {
                 window.location ='/';
             }
             return
-        }; */
+        };
 
         window.requestAnimationFrame(main);/* browser, tell me when to I can render my next frame.  I start with requesting a frame to animate my game, then I get the timestamp back when that frame is going to render*/
 
