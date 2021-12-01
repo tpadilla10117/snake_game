@@ -26,7 +26,7 @@ function Grid() {
 
 
     /* console.log(window.requestAnimationFrame(main)); */
-    /* window.requestAnimationFrame(main); */
+    window.requestAnimationFrame(main);
 
     function update() {
         updateSnake();
@@ -34,7 +34,7 @@ function Grid() {
 
 /* This functions draws the snake to the gameboard: */
     function draw() {
-        gameBoard.innerHTML = '';
+        gameBoard.innerHTML = ''; //clears the trailing snake pieces
         drawSnake(gameBoard);
     }
 

@@ -1,26 +1,26 @@
+import { getInputDirection } from "./Input";
 
 /* How many times the snake moves per second:  */
-    export const SNAKE_SPEED = 2;
+    export const SNAKE_SPEED = 1;
 
 /* How I represent my Snake, in an X and Y position (here it's middle of screen): */
     const snakeBody = [ { x: 11, y: 11 },
-        {x: 10, y:11},
-        {x:12, y:11},
-    
     ];
 
-/* Update loop - updates all of the logic for your game : */
+/* Update loop - updates all of the logic for my game : */
     export function update() {
+        const inputDirection = getInputDirection();
         /* console.log("update snake"); */
 
         for (let i = snakeBody.length - 2; i >= 0; i--) {
-            //We take the last element and set it to a new object, shifting the snake:
 
+        //We take the last element and set it to a new object, shifting the snake:
             snakeBody[i + 1] = { ...snakeBody[i] }; //i + 1 is the last element; snakeBody.length - 2 == 2nd to last element
         }
 
-        snakeBody[0].x += 1; //shift the snake over by 1
-        snakeBody[0].y += 0;
+    //Update the head of the snake:
+        snakeBody[0].x += inputDirection.x;
+        snakeBody[0].y += inputDirection.y;
 
     }
 
