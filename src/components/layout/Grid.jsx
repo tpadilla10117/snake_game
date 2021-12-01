@@ -1,6 +1,11 @@
-import React from "react";
+
+//TODO: Implement with React framework
+/* import React from "react"; */
+
+
 import './Grid.styles.scss';
 import { SNAKE_SPEED, draw as drawSnake, update as updateSnake } from './Snake';
+import { update as updateFood, draw as drawFood } from './Food.js';
 
 function Grid() {
 
@@ -26,16 +31,18 @@ function Grid() {
 
 
     /* console.log(window.requestAnimationFrame(main)); */
-    window.requestAnimationFrame(main);
+    /* window.requestAnimationFrame(main); */
 
     function update() {
         updateSnake();
+        updateFood();
     }
 
 /* This functions draws the snake to the gameboard: */
     function draw() {
         gameBoard.innerHTML = ''; //clears the trailing snake pieces
         drawSnake(gameBoard);
+        drawFood(gameBoard);
     }
 
     return (
