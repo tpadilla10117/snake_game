@@ -29,10 +29,6 @@ function Grid() {
         draw();
     }
 
-
-    /* console.log(window.requestAnimationFrame(main)); */
-    /* window.requestAnimationFrame(main); */
-
     function update() {
         updateSnake();
         updateFood();
@@ -44,6 +40,9 @@ function Grid() {
         drawSnake(gameBoard);
         drawFood(gameBoard);
     }
+
+     /* console.log(window.requestAnimationFrame(main)); */
+    /* window.requestAnimationFrame(main); */
 
     return (
         <div id="game-board">

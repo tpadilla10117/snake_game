@@ -6,9 +6,12 @@ import { getInputDirection } from "./Input";
 /* How I represent my Snake, in an X and Y position (here it's middle of screen): */
     const snakeBody = [ { x: 11, y: 11 },
     ];
+    let newSegments = 0;
 
 /* Update loop - updates all of the logic for my game : */
     export function update() {
+
+        addSegments();
         const inputDirection = getInputDirection();
         /* console.log("update snake"); */
 
@@ -36,4 +39,29 @@ import { getInputDirection } from "./Input";
             snakeElement.classList.add('snake'); //add the 'snake' class
             gameBoard.appendChild(snakeElement);
         })
+    }
+
+
+    export function expandSnake(amount) {
+        newSegments += amount;
+    }
+
+    export function onSnake(position) {
+        return snakeBody.some( segment => {
+            return equalPositions(segment, position);
+        })
+    }
+
+    function equalPositions(pos1, pos2) {
+        return (
+            pos1.x === pos2.x && pos1.y === pos2.y
+        )
+    };
+
+    function addSegments() {
+        for (let i = 0; i< newSegments; i++) {
+            snakeBody.push( {...snakeBody[snakeBody.length - 1] });
+        };
+
+        newSegments = 0;
     }
