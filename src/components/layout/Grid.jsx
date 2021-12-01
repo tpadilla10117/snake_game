@@ -4,16 +4,27 @@
 
 
 import './Grid.styles.scss';
-import { SNAKE_SPEED, draw as drawSnake, update as updateSnake } from './Snake';
+import { SNAKE_SPEED, draw as drawSnake, update as updateSnake, getSnakeHead, snakeIntersection } from './Snake';
 import { update as updateFood, draw as drawFood } from './Food.js';
+import { outsideGrid } from './FoodPosition';
 
 function Grid() {
 
     let lastRenderTime = 0;
+    let gameOver = false;
     const gameBoard = document.getElementById('game-board');
 
 /* 1) Game Loop: */
     function main(currentTime) {
+
+    //TODO: Check the confirm error:
+        /* if(gameOver) {
+            if(confirm('You lose.  Press ok to restart.')) {
+                window.location ='/';
+            }
+            return
+        }; */
+
         window.requestAnimationFrame(main);/* browser, tell me when to I can render my next frame.  I start with requesting a frame to animate my game, then I get the timestamp back when that frame is going to render*/
 
         const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000; /* convert to second from milliseconds */
@@ -32,6 +43,7 @@ function Grid() {
     function update() {
         updateSnake();
         updateFood();
+        checkDeath();
     }
 
 /* This functions draws the snake to the gameboard: */
@@ -40,6 +52,10 @@ function Grid() {
         drawSnake(gameBoard);
         drawFood(gameBoard);
     }
+
+    function checkDeath() {
+        gameOver = outsideGrid( getSnakeHead() ) || snakeIntersection();
+    };
 
      /* console.log(window.requestAnimationFrame(main)); */
     /* window.requestAnimationFrame(main); */
