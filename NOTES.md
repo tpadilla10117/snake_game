@@ -1,4 +1,5 @@
 <!-- Game Loop -->
+Game Loop:
 
 - A game loop runs continuously during gameplay. Each turn of the loop, it 1) processes user input without blocking, 2) updates the game state, and 3) renders the game. It tracks the passage of time to control the rate of gameplay.
 

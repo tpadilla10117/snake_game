@@ -7,7 +7,7 @@ function Grid() {
     let lastRenderTime = 0;
     const gameBoard = document.getElementById('game-board');
 
-/* Game Loop: */
+/* 1) Game Loop: */
     function main(currentTime) {
         window.requestAnimationFrame(main);/* browser, tell me when to I can render my next frame.  I start with requesting a frame to animate my game, then I get the timestamp back when that frame is going to render*/
 
@@ -32,6 +32,7 @@ function Grid() {
         updateSnake();
     }
 
+/* This functions draws the snake to the gameboard: */
     function draw() {
         gameBoard.innerHTML = '';
         drawSnake(gameBoard);
